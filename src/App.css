@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+@font-face {
+  font-family: 'Sanomat Sans Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Sanomat Sans Regular'), url('SanomatRegular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Sanomat Grab Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Sanomat Sans Regular'), url('SanomatGrab.woff2') format('woff2');
+}
+
+.color-grab {
+  color: #00b14f;
+}
+li{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+

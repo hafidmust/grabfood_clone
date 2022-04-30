@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Navigation from "./components/navigation/Navigation";
+import Header from "./components/header/Header";
+import Promotion from "./components/promotion/Promotion";
+import {useState} from "react";
+import {dummyPromo} from "./data/dummyPromo";
+import Category from "./components/category/Category";
+import {dummyCategory} from "./data/dummyCategory";
+import Information from "./components/information/Information";
 
 export default App;
+
+function App() {
+    const [promos, setPromos] = useState(dummyPromo)
+    const [categorys, setCategorys] = useState(dummyCategory)
+    return (
+        <div className={"setbg bg-local bg-center bg-cover h-96"}>
+            <Navigation />
+            <Header />
+            <Promotion promos={promos} />
+            <Category categorys={categorys} />
+            <Information />
+        </div>
+);
+}

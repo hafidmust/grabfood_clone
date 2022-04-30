@@ -1,0 +1,7 @@
+.setbg{
+    background-image: url("https://food.grab.com/static/page-home/ID-new-4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: center;
+}
