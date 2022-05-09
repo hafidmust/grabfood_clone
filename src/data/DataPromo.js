@@ -1,4 +1,4 @@
-export const dummyPromo = [
+export const dataPromo = [
     {
         id: 1,
         image : "https://d1sag4ddilekf6.azureedge.net/compressed/merchants/6-CZDJGEJKV3BHVA/hero/0d3a850075e84a6ca212c79d6a1a75cd_1586831109978915467.jpg",

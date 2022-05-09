@@ -1,4 +1,4 @@
-export const dummyCategory = [
+export const dataCategory = [
     {
         id: 1,
         imageCategory: "https://d1sag4ddilekf6.azureedge.net/cuisine/24/icons/upload-photo-icon_026ef33112374534a605781932ffcda5_1549034070930415662.jpeg",

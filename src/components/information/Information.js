@@ -2,9 +2,11 @@ import facebook from './facebook-brands.svg'
 import instagram from './instagram-brands.svg'
 import twitter from './twitter-brands.svg'
 import './information.css'
-import {useState} from "react";
+import Accordion from "./Accordion";
+import {dataAccordion} from "../../data/DataAccordion";
+
 const Information = () => {
-    const [active, setActive] = useState(false)
+
     return (
         <div className={"bg-white"}>
             <div>
@@ -93,6 +95,7 @@ const Information = () => {
                         <p>
                             EN
                         </p>
+
                     </div>
                 </div>
 
@@ -103,50 +106,9 @@ const Information = () => {
                 </div>
                 {/*Grid 4 Column*/}
                 <div className="grid grid-cols-1 md:grid-cols-4 mx-auto container pb-6">
-                    <div className="col">
-                        <h5 className={"font-semibold"}>Frequently Searched</h5>
-                        <p className={"text-sm"}>
-                            Burger King Menu<br/>
-                            Chatime Menu <br/>
-                            Domino's Pizza Menu <br/>
-                            Hokben Menu <br/>
-                            JCO Delivery <br/>
-                            KFC Menu <br/>
-                            McDonalds Menu <br/>
-                            Pizza Hut Delivery <br/>
-                            Richeese Menu <br/>
-                            Menu Solaria <br/>
-                            Starbucks Menu <br/>
-                            Yoshinoya Menu <br/>
-                        </p>
-                    </div>
-                    <div className="col">
-                        <h5 className={"font-semibold accordion"}>Popular Cuisines</h5>
-                        <p className={"text-sm"}>
-                            Chinese Food <br/>
-                            Fast Food <br/>
-                            Indian Food <br/>
-                            Indonesian Food <br/>
-                            Italian Food <br/>
-                            Japanese Food <br/>
-                            Korean Food <br/>
-                            Thai Food <br/>
-                            Vietnamese Food <br/>
-                        </p>
-                    </div>
-                    <div className="col">
-                        <h5 className={"font-semibold accordion"}>About Grab</h5>
-                        <p className={"text-sm"}>About Grab <br/>
-                            About GrabFood <br/>
-                            Blog<br/></p>
-                    </div>
-                    <div className="col">
-                        <h5 className={"font-semibold accordion"}>Support</h5>
-                        <p className={"text-sm"}>Help <br/>
-                            FAQs<br/>
-                            Be a GrabFood Merchant <br/>
-                            Drive With Grab<br/></p>
-                    </div>
+                    {dataAccordion.map(({title, content})=>(
+                        <Accordion title={title} content={content}/>
+                    ))}
 
                 </div>
 
